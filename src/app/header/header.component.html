@@ -1,0 +1,16 @@
+<p>
+  <mat-toolbar color="primary">
+    <mat-icon>home</mat-icon>&nbsp;
+    <span>ShoppingCart</span>&nbsp;
+    <div class="input-group">
+      <input type="search" id="form1" class="form-control" [(ngModel)]="searchedterm" (keyup)="search($event)" />&nbsp;
+      <button mat-raised-button color="primary"   >
+        search
+      </button>
+    </div>
+    <span class="example-spacer"></span>
+    <button mat-raised-button color="primary" (click)="login()">Login</button>&nbsp;
+    <mat-icon>shopping_cart</mat-icon>
+  </mat-toolbar>
+</p>
+<router-outlet></router-outlet>

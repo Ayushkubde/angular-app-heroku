@@ -1,0 +1,27 @@
+ <mat-card>
+    <mat-card-content>
+        <!-- <form [formGroup]="form" (ngSubmit)="onSubmit()">  -->
+            <form>
+            <h2>Log In</h2>
+           <!-- <mat-error *ngIf="loginInvalid">
+                The username and password were not recognised
+            </mat-error>  -->
+            <mat-form-field class="full-width-input">
+                <input matInput [(ngModel)]="Email" name="Email" placeholder="Email" >
+                <mat-error>
+                    Please provide a valid email address
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="full-width-input">
+                <input matInput type="password" [(ngModel)]="Password" name="Password" placeholder="Password" >
+                <mat-error>
+                    Please provide a valid password
+                </mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="insertData()">Login</button>
+            <button mat-raised-button color="primary" (click)="Register()">Register</button>
+        </form>
+    </mat-card-content>
+</mat-card> 
+
