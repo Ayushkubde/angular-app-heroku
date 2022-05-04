@@ -53,11 +53,11 @@
   "cart": [
     {
       "product": {
-        "id": 2,
-        "name": "Cubes",
-        "description": "vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui official.",
-        "imageUrl": "https://m.media-amazon.com/images/I/61LEPH85wVL._SL1200_.jpg",
-        "price": 3256
+        "id": 3,
+        "name": "Mirror Cube",
+        "description": "I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder ",
+        "imageUrl": "https://cdn.pixabay.com/photo/2014/04/02/11/17/cube-305822__340.png",
+        "price": 7412
       },
       "id": 1
     },
@@ -69,57 +69,7 @@
         "imageUrl": "https://cdn.pixabay.com/photo/2014/04/02/11/17/cube-305822__340.png",
         "price": 7412
       },
-      "id": 2
-    },
-    {
-      "product": {
-        "id": 4,
-        "name": "Megaminx Speed Cube",
-        "description": "It's difficult to find examples of lorem ipsum in use before Letraset made it popular as a dummy text in the 1960s, although McClintock says he remembers coming across the lorem ipsum passage in a book of old metal type samples., the master-builder",
-        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO0dZYC_oRRBh9cwUsBOOuv9C14yEx3r0CGRC2KNYs7MToFEwq6GE4_pHvtjLJB4K73i0&usqp=CAU",
-        "price": 8451
-      },
       "id": 3
-    },
-    {
-      "product": {
-        "id": 3,
-        "name": "Mirror Cube",
-        "description": "I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder ",
-        "imageUrl": "https://cdn.pixabay.com/photo/2014/04/02/11/17/cube-305822__340.png",
-        "price": 7412
-      },
-      "id": 4
-    },
-    {
-      "product": {
-        "id": 3,
-        "name": "Mirror Cube",
-        "description": "I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder ",
-        "imageUrl": "https://cdn.pixabay.com/photo/2014/04/02/11/17/cube-305822__340.png",
-        "price": 7412
-      },
-      "id": 5
-    },
-    {
-      "product": {
-        "id": 3,
-        "name": "Mirror Cube",
-        "description": "I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder ",
-        "imageUrl": "https://cdn.pixabay.com/photo/2014/04/02/11/17/cube-305822__340.png",
-        "price": 7412
-      },
-      "id": 6
-    },
-    {
-      "product": {
-        "id": 3,
-        "name": "Mirror Cube",
-        "description": "I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder ",
-        "imageUrl": "https://cdn.pixabay.com/photo/2014/04/02/11/17/cube-305822__340.png",
-        "price": 7412
-      },
-      "id": 7
     }
   ],
   "posts": [

@@ -69,5 +69,7 @@ import { ViewDetailsComponent } from './view-details/view-details.component';
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  
 })
+
 export class AppModule { }

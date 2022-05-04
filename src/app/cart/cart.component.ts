@@ -19,15 +19,17 @@ export class CartComponent implements OnInit {
   //   {id:3,productId:3,productName:'Test 3',qty:6,price:500},
   // {id:4,productId:4,productName:'Test 4',qty:2,price:100}
 
-cartItems=[];
+  cartItems = [];
   cartTotal = 0;
-  index=1
+  handler: any = null;
+  index = 1
   constructor(private messenger: MessengerService, private cart: CartService) { }
 
   ngOnInit() {
     this.handlesubscription();
     this.loadCartItems();
-    console.log("this.cartItems",this.cartItems);
+    console.log("this.cartItems", this.cartItems);
+    this.loadStripe();
   }
   handlesubscription() {
     // we use subscribe here beacuse whenever some event will happen this event will call by its own
@@ -39,8 +41,8 @@ cartItems=[];
 
   loadCartItems() {
     this.cart.getCartItem().subscribe((items: CartItem[]) => {
-     this.cartItems=items;
-     this.calcCartTotal();
+      this.cartItems = items;
+      this.calcCartTotal();
 
     })
 
@@ -74,13 +76,57 @@ cartItems=[];
     })
   }
 
-   discardCardItem(id){
-    
-    this.cart.removeCartItem(id).subscribe(()=> {
-     console.log("successful");
-     this.loadCartItems();
+  discardCardItem(id) {
+
+    this.cart.removeCartItem(id).subscribe(() => {
+      console.log("successful");
+      this.loadCartItems();
     });
-  
-    
+
+
+  }
+
+  pay(cartTotal) {
+
+    var handler = (<any>window).StripeCheckout.configure({
+      key: 'pk_test_51KvbYvSF4CokfeHp4ocgGIM4c7QrOrg0Ox2eUakDJdAEsYL6GJzO3VspDfqCQvvCDqHkM5sQQpF5P9owhAtrrM8700rCfZKuBL',
+      locale: 'auto',
+      token: function (token: any) {
+        // You can access the token ID with `token.id`.
+        // Get the token ID to your server-side code for use.
+        console.log(token)
+        alert('Token Created!!');
+      }
+    });
+
+    handler.open({
+      name: 'Shopping cart',
+      description: '2 widgets',
+      
+    });
+
+  }
+  loadStripe() {
+
+    if (!window.document.getElementById('stripe-script')) {
+      var s = window.document.createElement("script");
+      s.id = "stripe-script";
+      s.type = "text/javascript";
+      s.src = "https://checkout.stripe.com/checkout.js";
+      s.onload = () => {
+        this.handler = (<any>window).StripeCheckout.configure({
+          key: 'pk_test_51KvbYvSF4CokfeHp4ocgGIM4c7QrOrg0Ox2eUakDJdAEsYL6GJzO3VspDfqCQvvCDqHkM5sQQpF5P9owhAtrrM8700rCfZKuBL',
+          locale: 'auto',
+          token: function (token: any) {
+            // You can access the token ID with `token.id`.
+            // Get the token ID to your server-side code for use.
+            console.log(token)
+            alert('Payment Success!!');
+          }
+        });
+      }
+
+      window.document.body.appendChild(s);
+    }
   }
 }
