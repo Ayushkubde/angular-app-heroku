@@ -1,16 +1,15 @@
 <p>
-  <mat-toolbar color="primary">
-    <mat-icon>home</mat-icon>&nbsp;
+  <mat-toolbar color="primary" >
+    <img src="../../assets/shoppingcart.jpg" style="height: 50px;">
     <span>ShoppingCart</span>&nbsp;
     <div class="input-group">
       <input type="search" id="form1" class="form-control" [(ngModel)]="searchedterm" (keyup)="search($event)" />&nbsp;
-      <button mat-raised-button color="primary"   >
-        search
-      </button>
+      <a routerLink="/addproduct" class="btn btn-primary">AddProduct</a>
     </div>
     <span class="example-spacer"></span>
     <button mat-raised-button color="primary" (click)="login()">Login</button>&nbsp;
-    <mat-icon>shopping_cart</mat-icon>
+    <!-- <mat-icon>shopping_cart</mat-icon> -->
+    
   </mat-toolbar>
 </p>
 <router-outlet></router-outlet>

@@ -39,7 +39,7 @@
       "id": 6,
       "name": "Braille Rubik’s Cube",
       "description": " Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus., the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure",
-      "imageUrl": "https://c8.alamy.com/comp/F9GBYK/rubik-cube-isolated-on-a-white-background-F9GBYK.jpg",
+      "imageUrl": "https://m.media-amazon.com/images/I/71qZ+DsFRQL._AC_SL1500_.jpg",
       "price": 4518
     },
     {
@@ -48,6 +48,55 @@
       "description": "Lorem ipsum was popularized in the 1960s with Letraset's dry-transfer sheets, and later entered the digital world via Aldus PageMaker., the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure",
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBK-4ht1wFSlU0XQoMFPQ7jr64aUNhfQiwow&usqp=CAU",
       "price": 7485
+    },
+    {
+      "id": 8,
+      "name": "cubebox",
+      "description": " Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus., the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBK-4ht1wFSlU0XQoMFPQ7jr64aUNhfQiwow&usqp=CAU",
+      "price": 7410
+    },
+    {
+      "id": "9",
+      "name": "Flower",
+      "description": "A flower is the reproductive part of flowering plants. Flowers are also called the bloom or blossom of a plant. Flowers have petals. Inside the part of the flower that has petals are the parts which produce pollen and seeds.",
+      "price": "4152",
+      "imageUrl": "https://m.media-amazon.com/images/I/81HEBaXQlmL._SX679_.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Flower Pot",
+      "description": "A flower is the reproductive part of flowering plants. Flowers are also called the bloom or blossom of a plant. Flowers have petals. Inside the part of the flower that has petals are the parts which produce pollen and seeds.",
+      "price": "10000",
+      "imageUrl": "https://m.media-amazon.com/images/I/81xtn5oEEPL._SX679_.jpg"
+    },
+    {
+      "id": "13",
+      "name": "Adidas(Cricket Bat)",
+      "description": "ADIDAS Kashmir Willow Cricket BAT XT White 2.0",
+      "price": "3000",
+      "imageUrl": "https://m.media-amazon.com/images/I/61vcWT1l+LL._SX679_.jpg"
+    },
+    {
+      "id": "14",
+      "name": "Leather ball",
+      "description": "Cricnix Cricket Ball Premier Red Leather Red 5.5oz (1-Pack/3-Pack/6-Pack) for Seniors Match",
+      "price": "12000",
+      "imageUrl": "https://m.media-amazon.com/images/I/81y70+WUT1L._AC_SX679_.jpg"
+    },
+    {
+      "id": "15",
+      "name": "Oneplus",
+      "description": "OnePlus 10 Pro 5G | Volcanic Black | 8GB+128GB | U.S. Unlocked,NE2115",
+      "price": "25000",
+      "imageUrl": "https://m.media-amazon.com/images/I/81qOD8EZTjL._AC_SX466_.jpg"
+    },
+    {
+      "id": "16",
+      "name": "Mobile cover case",
+      "description": "Spigen Tough Armor Designed for OnePlus 10 Pro 5G Case (2022) - Black",
+      "price": "500",
+      "imageUrl": "https://m.media-amazon.com/images/I/61e4-F90qhL._AC_SX679_.jpg"
     }
   ],
   "cart": [
@@ -60,16 +109,113 @@
         "price": 7412
       },
       "id": 1
+    }
+  ],
+  "getProductDetails": [
+    {
+      "id": 1,
+      "name": "RubixCube",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "imageUrl": "https://cdn.pixabay.com/photo/2014/04/02/14/04/cube-306046__340.png",
+      "price": 299
     },
     {
-      "product": {
-        "id": 3,
-        "name": "Mirror Cube",
-        "description": "I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder ",
-        "imageUrl": "https://cdn.pixabay.com/photo/2014/04/02/11/17/cube-305822__340.png",
-        "price": 7412
-      },
+      "id": 2,
+      "name": "Cubes",
+      "description": "vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui official.",
+      "imageUrl": "https://m.media-amazon.com/images/I/61LEPH85wVL._SL1200_.jpg",
+      "price": 3256
+    },
+    {
+      "id": 3,
+      "name": "Mirror Cube",
+      "description": "I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder ",
+      "imageUrl": "https://cdn.pixabay.com/photo/2014/04/02/11/17/cube-305822__340.png",
+      "price": 7412
+    },
+    {
+      "id": 4,
+      "name": "Megaminx Speed Cube",
+      "description": "It's difficult to find examples of lorem ipsum in use before Letraset made it popular as a dummy text in the 1960s, although McClintock says he remembers coming across the lorem ipsum passage in a book of old metal type samples., the master-builder",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO0dZYC_oRRBh9cwUsBOOuv9C14yEx3r0CGRC2KNYs7MToFEwq6GE4_pHvtjLJB4K73i0&usqp=CAU",
+      "price": 8451
+    },
+    {
+      "id": 5,
+      "name": "Power Speed Cube Puzzle",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam., the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure",
+      "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/41Mc21OEHOL._SR600%2C315_PIWhiteStrip%2CBottomLeft%2C0%2C35_SCLZZZZZZZ_FMpng_BG255%2C255%2C255.jpg",
+      "price": 9654
+    },
+    {
+      "id": 6,
+      "name": "Braille Rubik’s Cube",
+      "description": " Donec a dui et dui fringilla consectetur id nec massa. Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus., the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure",
+      "imageUrl": "https://c8.alamy.com/comp/F9GBYK/rubik-cube-isolated-on-a-white-background-F9GBYK.jpg",
+      "price": 4518
+    },
+    {
+      "id": 7,
+      "name": "Kilominx Cube",
+      "description": "Lorem ipsum was popularized in the 1960s with Letraset's dry-transfer sheets, and later entered the digital world via Aldus PageMaker., the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBK-4ht1wFSlU0XQoMFPQ7jr64aUNhfQiwow&usqp=CAU",
+      "price": 7485
+    }
+  ],
+  "Register": [
+    {
+      "firstname": "Rajesh",
+      "lastname": "Gopal",
+      "Address": "Nandanagar",
+      "email": "Rajesh@gmail.com",
+      "password": "Jul@20!6",
+      "id": 1
+    },
+    {
+      "firstname": "Ramesh",
+      "lastname": "pachod",
+      "Address": "1245.nandanagar",
+      "email": "superuser@hilomrm.com",
+      "password": "Jul@20!6",
+      "id": 6
+    },
+    {
+      "firstname": "Ramesh",
+      "lastname": "pachod",
+      "Address": "1245.nandanagar",
+      "email": "superuser@hilomrm.com",
+      "password": "Jul@20!76",
+      "id": 9
+    },
+    {
+      "firstname": "Ramesh",
+      "lastname": "pachod",
+      "Address": "1245,Nandanagar",
+      "email": "superuser@hilomrm.com",
+      "password": "Jul@20!6",
+      "id": 10
+    }
+  ],
+  "login": [
+    {
+      "Email": "normaluser1@test.com",
+      "Password": "hilo@123",
+      "id": 1
+    },
+    {
+      "Email": "usertest@gmail.com",
+      "Password": "hilo@123",
+      "id": 2
+    },
+    {
+      "Email": "Adminuser@test.com",
+      "Password": "hilo@123",
       "id": 3
+    },
+    {
+      "Email": "normaluser1@test.com",
+      "Password": "Jul@20!6",
+      "id": 4
     }
   ],
   "posts": [

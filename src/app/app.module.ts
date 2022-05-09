@@ -31,6 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { FilterPipe } from './filter.pipe';
 import { ViewDetailsComponent } from './view-details/view-details.component';
+import { BaseComponent } from './base/base.component';
+import { AddproductComponent } from './addproduct/addproduct.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import { ViewDetailsComponent } from './view-details/view-details.component';
     ProductItemComponent,
     ModalComponent,
     ViewDetailsComponent,
-    FilterPipe
+    FilterPipe,
+    BaseComponent,
+    AddproductComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

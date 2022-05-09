@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import Swal from 'sweetalert2/dist/sweetalert2.js';
+import { ProductService } from '../product.service';
 const httpOptions = {
   headers: new HttpHeaders({
-      'Content-Type':  'application/json'
-    })
+    'Content-Type': 'application/json'
+  })
 };
 @Component({
   selector: 'app-register',
@@ -14,7 +16,7 @@ export class RegisterComponent implements OnInit {
   Roles: any = ['Admin', 'Author', 'Reader'];
   errorMessage: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private product: ProductService) { }
 
   public firstname = '';
   public lastname = '';
@@ -22,24 +24,33 @@ export class RegisterComponent implements OnInit {
   public email = '';
   public password = '';
 
-  public apiurl = "https://localhost:44340/api/Register";
-
   ngOnInit() {
-    this.Register();
+    //this.Register();
   }
 
-  public Register() {
+  public registerUser() {
     const body = { firstname: this.firstname, lastname: this.lastname, Address: this.Address, email: this.email, password: this.password };
-    //const data=JSON.parse('{body}').Tostring();
-   // var b = JSON.parse(JSON.stringify(body));
-   return this.http.post<any>(this.apiurl, body,httpOptions).subscribe((response: Response) => {
-        console.log("data is successfully insered",response);
-      })
-      // error: error => {
-      //   this.errorMessage = error.message;
-      //   console.error('There was an error!');
-      // }
-  
-    }
+    return this.product.registeruser(body).subscribe({
+      next: data => {
+        localStorage.setItem('RegisterUser', JSON.stringify(body));
+        Swal.fire('Thank you...', 'You submitted succesfully!', 'success')
+        this.resetForm();
+        console.log("suceess");
+      },
+      error: error => {
+        this.errorMessage = error.message;
+        console.error('There was an error!', error)
+      }
+    });
 
   }
+
+
+  public resetForm() {
+    this.firstname = "";
+    this.firstname = "";
+    this.Address = "";
+    this.email = "";
+    this.password = "";
+  }
+}

@@ -1,12 +1,101 @@
-<div class="card mb-4 box-shadow" >
-    <img class="bd-placeholder-img card-img-top" [src]="productItem.imageUrl" /> 
-     <div class="card-body">
-        <p class="card-text">
-            <strong>{{productItem.price | currency:'INR' }}</strong>
-        </p>
-        <p class="card-text">
-            <strong>{{productItem.name}}</strong>
-        </p>
-        <p class="card-text">{{productItem.description}}</p>
-    </div>
+<!-- <h1 class="text-info" *ngIf="_router.url == 'viewdetails/:id'" >Data</h1> -->
+<div class="container-fluid">
+    <li *ngFor="let details of producteddata">
+        <div class="row">
+            <div class="col-md-4">
+                <img class="bd-placeholder-img card-img-top" class="size" [src]="details.imageUrl" />
+            </div>
+            <div class="col-md-6">
+                <p class="card-text">
+                    <strong>
+                        <h1>{{details.description}}</h1>
+                    </strong>
+                </p>
+                <p class="card-text">
+                    <strong>{{details.price | currency:'INR' }}</strong>
+                </p><br>
+                <p class="card-text">
+                    <strong>{{details.name}}</strong>
+                </p>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-md btn-outline-primary">Add To Cart</button>
+                </div>
+                <div id="icon-farm-widget" class="a-section icon-farm-margins sopp-feature-override celwidget"
+                    data-csa-c-id="kyvmbn-bfmjkv-fytutl-dm40n7" data-cel-widget="icon-farm-widget">
+                    <div id="icon-farm" class="a-section">
+                        <div id="icon-farm-container" class="a-section a-spacing-none">
+                            <div class="a-row icon-farm-wrapper">
+                                <div data-buying-option-index="0"
+                                    data-icon-content="icon-container-53909909-4fc1-4a70-843f-d45ee7d7d02d"
+                                    data-name="PAY_ON_DELIVERY" data-type="custom-pop-over" id="PAY_ON_DELIVERY"
+                                    class="a-column a-span3 a-text-center icon-container icon-grid-width celwidget a-declarative"
+                                    data-csa-c-id="294bgg-f089we-ylu5xi-ep9i4j" data-cel-widget="PAY_ON_DELIVERY">
+                                    <div class="a-section a-spacing-none"> <img
+                                            src="https://images-na.ssl-images-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-cod._CB485937110_.png"
+                                            class="a-image-wrapper a-manually-loaded icon-box" id=""
+                                            style="height:35px;width:35px;" alt="Pay on Delivery"
+                                            data-a-image-source="https://images-na.ssl-images-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-cod._CB485937110_.png">
+                                    </div>
+                                    <div class="a-section a-spacing-none icon-content"> <a
+                                            class="a-size-small a-link-normal a-text-normal" href="#"> Pay on Delivery
+                                        </a> </div>
+                                </div>
+                                <div data-buying-option-index="0" data-icon-content="icon-farm-secondary-view-holder"
+                                    data-name="RETURNS_POLICY" data-type="pop-over" id="RETURNS_POLICY"
+                                    class="a-column a-span3 a-text-center icon-container icon-grid-width celwidget"
+                                    data-csa-c-id="jz0ee8-ctan5o-4v2ihb-u4sbiz" data-cel-widget="RETURNS_POLICY"> <span
+                                        class="a-declarative" data-action="a-popover" data-csa-c-type="widget"
+                                        data-csa-c-func-deps="aui-da-a-popover"
+                                        data-a-popover="{&quot;dataStrategy&quot;:&quot;preload&quot;,&quot;name&quot;:&quot;return-policy-secondary-view&quot;,&quot;activate&quot;:&quot;onclick&quot;,&quot;width&quot;:&quot;533&quot;,&quot;position&quot;:&quot;triggerBottom&quot;}"
+                                        data-csa-c-id="9y7sj1-ygegrl-77ny43-anv5hj">
+                                        <div class="a-section a-spacing-none"> <img
+                                                src="https://images-na.ssl-images-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-returns._CB484059092_.png"
+                                                class="a-image-wrapper a-manually-loaded icon-box" id=""
+                                                style="height:35px;width:35px;" alt="	
+7 Days Replacement" data-a-image-source="https://images-na.ssl-images-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-returns._CB484059092_.png">
+                                        </div>
+                                        <div class="a-section a-spacing-none icon-content"> <a
+                                                class="a-size-small a-link-normal a-text-normal" href="#">
+                                                7 Days Replacement </a> </div>
+                                    </span> </div>
+                                <div data-buying-option-index="0"
+                                    data-icon-content="icon-container-3eb2c963-5c3c-4efb-a837-696be02dab66"
+                                    data-name="AMAZON_DELIVERED" data-type="custom-pop-over" id="AMAZON_DELIVERED"
+                                    class="a-column a-span3 a-text-center icon-container icon-grid-width celwidget a-declarative"
+                                    data-csa-c-id="g38mm0-pjuck2-90f52u-qj35iv" data-cel-widget="AMAZON_DELIVERED">
+                                    <div class="a-section a-spacing-none"> <img
+                                            src="https://images-na.ssl-images-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-amazon-delivered._CB485933725_.png"
+                                            class="a-image-wrapper a-manually-loaded icon-box" id=""
+                                            style="height:35px;width:35px;" alt="Amazon Delivered"
+                                            data-a-image-source="https://images-na.ssl-images-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-amazon-delivered._CB485933725_.png">
+                                    </div>
+                                    <div class="a-section a-spacing-none icon-content"> <a
+                                            class="a-size-small a-link-normal a-text-normal" href="#"> Shopping Cart
+                                            Delivered
+                                        </a> </div>
+                                </div>
+                                <div data-buying-option-index="0"
+                                    data-icon-content="icon-container-b2619c6a-0b3e-4b56-b1fe-bb190a7b55cc"
+                                    data-name="WARRANTY" data-type="custom-pop-over" id="WARRANTY"
+                                    class="a-column a-span3 a-text-center icon-container icon-grid-width celwidget a-declarative"
+                                    data-csa-c-id="vzi0h2-gig7xs-ubdkty-fj2n5w" data-cel-widget="WARRANTY">
+                                    <div class="a-section a-spacing-none"> <img
+                                            src="https://images-na.ssl-images-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-warranty._CB485935626_.png"
+                                            class="a-image-wrapper a-manually-loaded icon-box" id=""
+                                            style="height:35px;width:35px;" alt="1 Year Warranty"
+                                            data-a-image-source="https://images-na.ssl-images-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-warranty._CB485935626_.png">
+                                    </div>
+                                    <div class="a-section a-spacing-none icon-content"> <a
+                                            class="a-size-small a-link-normal a-text-normal" href="#"> 1 Year Warranty
+                                        </a> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
 </div>
+
+

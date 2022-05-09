@@ -17,7 +17,7 @@ export class ProductItemComponent implements OnInit {
   constructor(private messenger:MessengerService,private cart:CartService,private router: Router) { }
 
   ngOnInit() {
-   
+   console.log("productitemid",this.productItem.id)
   }
 
   addToCart(){
@@ -26,8 +26,10 @@ export class ProductItemComponent implements OnInit {
     })
   }
 
-  viewDetails(){
-   this.router.navigateByUrl("/viewDetails");
- //router.navigate(['/login']);
+ public viewDetails(){
+ 
+    this.router.navigateByUrl("/viewdetails"+"/"+this.productItem.id);
+  
+  
   }
 }

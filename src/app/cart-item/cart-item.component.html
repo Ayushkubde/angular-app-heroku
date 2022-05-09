@@ -1,6 +1,19 @@
-<div class="cart-item">    
-<span>{{cartItem.productName}}</span> x
-<span>{{cartItem.qty}}</span> :
-<span>: <strong>{{(cartItem.qty * cartItem.price) | currency :'INR'}}</strong></span>
- <button type="button" class="btn btn-primary" (click)="discardCardItem(cartItem.id)">Discard item</button>
+<div class="cart-item">  
+    <div class="row">
+        <div class="col-md-2">
+            <span ><img [src]="cartItem.imageUrl"></span>  &nbsp;
+        </div>
+        <div class="col-md-2">
+            <span>{{cartItem.productName}}</span> x
+        </div>
+        <div class="col-md-1">
+            <span>{{cartItem.qty}}</span> :
+        </div>
+        <div class="col-md-2">
+            <span><strong>{{(cartItem.qty * cartItem.price) | currency :'INR'}} {{cartItem.length}}</strong></span>
+        </div>
+        <div class="col-md-1">
+            <button type="button" class="btn btn-primary" (click)="discardCardItem(cartItem.id)">Discard item</button>
+        </div>
+    </div>
 </div>

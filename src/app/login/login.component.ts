@@ -5,7 +5,8 @@ import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
 import { ModalComponent } from '../modal/modal.component';
 import { HttpClient } from '@angular/common/http';
 import { error } from '@angular/compiler/src/util';
-
+import { ProductService } from '../product.service';
+import Swal from 'sweetalert2/dist/sweetalert2.js';
 
 @Component({
   selector: 'app-login',
@@ -14,25 +15,31 @@ import { error } from '@angular/compiler/src/util';
 })
 export class LoginComponent {
 
-  
-  public Email = '';
-  public Password = '';
-  public apiurl = "https://localhost:44340/api/login";
-  errorMessage: any;
-  constructor(private router: Router, private http: HttpClient) { }
 
-  ngOnInit(): void {
+  public Email: string;
+  public Password: string;
+  errorMessage: any;
+  constructor(private router: Router, private http: HttpClient, private Product: ProductService) { }
+
+  ngOnInit() {
+
+    this.resetform();
   }
 
-  public Register() {
+  public RegisterProduct() {
     this.router.navigateByUrl("Register");
   }
+
   public insertData() {
     const body = { Email: this.Email, Password: this.Password };
-
-    this.http.post<any>('https://localhost:44340/api/login', body).subscribe({
+    
+    this.Product.logindetails(body).subscribe({
       next: data => {
-        console.log("data is successfully inserted");
+        localStorage.setItem('currentUser', JSON.stringify(body));
+        console.log("suceess");
+        this.resetform();
+        Swal.fire('Thank you...', 'You Logged In succesfully!', 'success')
+
       },
       error: error => {
         this.errorMessage = error.message;
@@ -41,6 +48,10 @@ export class LoginComponent {
     })
   }
 
+  resetform() {
+    this.Email = "";
+    this.Password = "";
+  }
 }
 
 

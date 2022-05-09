@@ -1,0 +1,33 @@
+<mat-toolbar>
+   <span>Add Product</span>
+</mat-toolbar>
+<mat-card class="my-card">
+   <mat-card-content>
+      <form class="my-form">
+         <mat-form-field class="full-width">
+            <mat-label>Id</mat-label>
+            <input matInput [(ngModel)]="id" placeholder="id" name="id">
+         </mat-form-field>
+         <mat-form-field class="full-width">
+            <mat-label>name</mat-label>
+            <input matInput [(ngModel)]="name" placeholder="name" name="name">
+         </mat-form-field>
+         <mat-form-field class="full-width">
+            <mat-label>description</mat-label>
+            <input matInput [(ngModel)]="description" placeholder="description" name="description">
+         </mat-form-field>
+         <mat-form-field class="full-width">
+            <mat-label>price</mat-label>
+            <input matInput [(ngModel)]="price" placeholder="price" name="price">
+         </mat-form-field>
+         <mat-form-field class="full-width">
+            <mat-label>ImageUrl</mat-label>
+            <input matInput [(ngModel)]="imageUrl" placeholder="imageUrl" name="imageUrl">
+         </mat-form-field>
+      </form>
+   </mat-card-content>
+   <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="AddProduct()">AddProduct</button>
+   </mat-card-actions>
+</mat-card>
+<mat-toolbar>
